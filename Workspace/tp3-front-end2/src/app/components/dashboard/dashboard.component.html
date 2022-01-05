@@ -1,0 +1,36 @@
+<section>
+    <!--
+        Settings : Changer votre mot de passe
+        Renouveller permis(si expiré)
+    -->
+    <div class="container p-5  m-5 border text-white" style="background-color: #fcec5f;">
+        <h1 class="text-center"><i class="fas fa-id-card"></i> {{permis.citoyen.id}}</h1>
+        <div class="text-center">
+            <h1 class="d-inline border-bottom mb-2"> {{permis.citoyen.prenom}} {{permis.citoyen.nom}}</h1>
+            <h2>Informations personnelles</h2>
+        </div>
+        <div>
+            <img class="border border-3" style="float:right;"  src="http://localhost:8484/permisSantePermis/qrCode/{{permis.idPermis}}" alt="Retrouver votre code Qr dans votre courriel">
+        </div>
+        <h3>Courriel: <span> {{permis.citoyen.courriel}}</span></h3>
+        <h3>NASSM: <span>{{permis.citoyen.nassm}}</span></h3>
+        <h3>Âge: <span>{{permis.citoyen.age}}</span></h3>
+        <h3><span *ngIf="permis.citoyen.sexe === 'M'">Sexe: <i class="fas fa-mars text-primary border border-white p-2"></i></span>
+            <span *ngIf="permis.citoyen.sexe === 'F'">Sexe: <i class="fas fa-venus" style="color: pink;"></i></span>
+            <span *ngIf="permis.citoyen.sexe === 'A'">Sexe: <i class="fas fa-transgender text-info"></i></span>
+        </h3>
+        <hr>
+        <div class="container" *ngIf="permis.typePermis === 'test'">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <h2>Informations Permis</h2>
+                    <h3 *ngIf="!permis.expired">Date d'expiration: <span  class="text-info">{{permis.dateFin}}</span></h3>
+                    <h3 *ngIf="permis.expired">Date d'expiration: <span  class="text-danger">{{permis.dateFin}}</span></h3>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <button class="btn btn-outline-light p-5" type="button" (click)="renouvellerPermis()">Renouveller le permis expiré</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

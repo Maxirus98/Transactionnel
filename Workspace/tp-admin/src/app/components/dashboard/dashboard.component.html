@@ -1,0 +1,32 @@
+<table class="table table-light">
+  <caption class="text-center text-dark">Informations Personnelles</caption>
+    <thead>
+      <tr class="text-center">
+        <th scope="col">#</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Âge</th>
+        <th scope="col">Sexe</th>
+        <th scope="col">Courriel</th>
+        <th scope="col">Téléphone</th>
+        <th scope="col">Date d'expiration</th>
+        <th scope="col">Options</th> 
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of permis">
+          <td>{{p.citoyen.id}}</td>
+            <td><textarea class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.prenom}}" readonly></textarea></td>
+            <td><textarea class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.nom}}" readonly></textarea></td>
+            <td><textarea  class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.age}}" readonly></textarea></td>
+            <td><textarea  class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.sexe}}" readonly></textarea></td>
+            <td><textarea  class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.courriel}}" readonly></textarea></td>
+            <td><textarea  class="border-0 text-center text{{p.idPermis}}" value="{{p.citoyen.telephone}}" readonly></textarea></td>
+            <td>{{p.dateFin}}</td>
+          <td>
+            <button class="btn btn-outline-warning form-control" (click)="renouvellerPermis(p.idPermis)"><i class="fas fa-clock"></i></button>
+            <button class="btn btn-outline-danger form-control" (click)="deletePermis(p.idPermis)"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,37 @@
+.box {
+  width: 300px;
+  background: #fbd34c;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  border: 3px solid white;
+  color: #fff;
+  font-family: arial;
+  position: relative;
+}
+
+.triangle:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid white;
+  right: 19px;
+  top: -19px;
+}
+
+.triangle2:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid white;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid white;
+  left: 19px;
+  top: -19px;
+}

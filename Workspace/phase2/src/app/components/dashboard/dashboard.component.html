@@ -1,0 +1,11 @@
+<section>
+    <div class="container">
+        <br>
+        <br>
+        <h1> Hello : {{citizen.firstName}}  {{citizen.lastName}}</h1>
+        <h3>Welcome to your dashboard</h3>
+        <p>Id:<input type="text" [(ngModel)]="citizen.id"  readonly></p>
+        <p>Email:<input type="text" [(ngModel)]="citizen.email"  readonly></p>
+        <p>Password:<input type="text" [(ngModel)]="citizen.password" readonly></p> <!--Variablae qui existe et que tu permets qu'elle soit modifié-->
+    </div>
+</section>

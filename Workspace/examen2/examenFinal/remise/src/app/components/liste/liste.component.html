@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Ouverture</th>
+        <th scope="col">Somme Visee</th>
+        <th scope="col">Taux</th>
+        <th scope="col">Options</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let compte of comptes let index of comptes">
+            <td>{{compte.id}}</td>
+            <td>{{compte.prenom}}</td>
+            <td>{{compte.nom}}</td>
+            <td>{{compte.ouverture}}</td>
+            <td>{{compte.sommeVisee}}</td>
+            <td>{{compte.taux}}</td>
+            <td><button class="btn btn-danger" (click)="delete(index)">Delete</button></td>
+        </tr>
+
+    </tbody>
+  </table>

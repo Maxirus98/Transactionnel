@@ -1,0 +1,50 @@
+<div class="p-5 m-5 text-white rounded" style="background-color: #fcec5f;">
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+      <div class="container">
+        <p *ngIf="messageValidation != ''">{{messageValidation}}</p>
+      </div>
+      <h4>Informations du Compte</h4>
+        <hr>
+      <div class="form-group" >
+        <label for="courriel">Adresse courriel</label>
+        <input type="email" class="form-control" id="courriel" formControlName="courriel" aria-describedby="emailHelp" placeholder="Ex: exemple@exemple.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe </label>
+        <!-- formControlName ou [(ngModel="password")]-->
+        <input type="password" class="form-control" formControlName="password" id="password" placeholder="Entrez votre mot de passe.">
+      </div>
+      <div class="text-center">
+        <button type="submit" id="envoyer" class="btn btn-outline-light p-3 m-3">Se connecter</button>
+      </div>
+      </form>
+    <div id="creerCompte" class="container p-5">
+      <div class="row">
+        <h5 class="mx-3">Critères pour se créer un compte: </h5>
+      </div>
+      <div class="row">  
+        <div class="col-lg-6 col-12">
+          <ul class="list-group">
+            <li class="list-group-item">
+              Il faut avoir au moins 18 ans pour faire sa propre demande de permis.
+            </li>
+            <li class="list-group-item">
+              Il faut avoir passé un test de la COVID-19 dans les 14 derniers jours.
+              Le résultat du test doit être négatif.
+            </li>
+            <span class="text-center">OU</span>
+            <li class="list-group-item">
+              Il faut avoir eu les 2 doses du vaccin de la COVID-19.
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="text-center mx-5 mt-4 mt-lg-0">
+            <button type="button" class=" btn btn-outline-secondary p-5 mb-5" routerLink='/subscribe'>Faire une nouvelle demande de permis</button>
+          <br >
+            <button type="button" class="btn btn-outline-dark p-5" routerLink='/tuteur'>Faire une nouvelle demande de permis pour votre enfant.</button>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>

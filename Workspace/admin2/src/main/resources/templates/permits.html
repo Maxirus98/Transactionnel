@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+  <title>Permis</title>
+  <th:block th:include="layout/header"></th:block>
+
+</head>
+<body>
+<div class="container">
+
+  <div th:if="${not #lists.isEmpty(permits)}">
+
+    <h2>All Permits</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>qrCode</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr th:each="permit : ${permits}">
+        <td th:text="${permit.idPermis}">Id</td>
+        <td th:text="${permit.typePermis}">Name</td>
+        <td>
+          <!-- Pour prendre les codes qr -->
+          <img class="img-thumbnail" style="max-width:35%;" th:src="${'permits/qrcode/'+ permit.idPermis}">
+        </td>
+        <td><a  th:href="${'/permits/edit/'+permit.idPermis}" class="btn btn-info">Edit</a></td>
+        <td><a  th:href="${'/permits/delete/'+permit.idPermis}" class="btn btn-danger">Delete</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

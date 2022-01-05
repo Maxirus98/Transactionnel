@@ -1,0 +1,12 @@
+1 PAR JOUR
+
+TODO : Mot de passe oublié BUG --> TROUVER COMMENT CHERCHER PAR NASSM OU PAR COURRIEL SEULEMENT DANS SPRING
+TODO : Généré qr code pour permis test X
+TODO : Make sure that citizen is not stored if not in ministere
+TODO : Faire application admin x
+TODO : Changer repository dans controllers par services pour cacher les méthodes
+TODO: Changer pour les variables d'environnement
+TODO : REFACTOR
+TODO : CAHIER DES CHARGES COMPLET
+
+

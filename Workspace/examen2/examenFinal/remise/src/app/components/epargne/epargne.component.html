@@ -1,0 +1,11 @@
+<form [formGroup]="formEpargne" (ngSubmit)="creerCompteEpargne()"class="container text-center">
+    <div class="form-group">
+        <label for="visee">Épargne visée</label>
+        <input type="number" class="form-control" formControlName="visee" id="visee">
+        <label for="taux">Taux</label>
+        <input type="number" class="form-control" formControlName="taux" id="taux">
+        <label for="taux">Id de votre compte cheque</label>
+        <input type="number" class="form-control" formControlName="id" id="id">
+    </div>
+    <button type="submit" class="btn btn-primary form-control my-2">Envoyer</button>
+  </form>

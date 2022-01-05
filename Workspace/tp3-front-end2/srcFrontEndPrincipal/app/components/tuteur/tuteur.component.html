@@ -1,0 +1,11 @@
+<form [formGroup]="formTuteur" (ngSubmit)="sendEmail()" style="background-color: #fcec5f;" class="text-center border border-white rounded m-5 p-5 text-white">
+    <h2 class="display-4">Vérification du courriel du tuteur</h2>
+    <div class="container">
+        <p class="text-danger" *ngIf="messageValidation != ''">{{messageValidation}}</p>
+    </div>
+    <div class="form-group">
+        <label for="courriel">Courriel du tuteur:</label>
+        <input type="email" class="form-control" id="courriel" formControlName="courriel"placeholder="example@example.com">
+        <button type="submit" class="form-control btn btn-outline-light mt-5">Envoyer</button>
+    </div>
+</form>

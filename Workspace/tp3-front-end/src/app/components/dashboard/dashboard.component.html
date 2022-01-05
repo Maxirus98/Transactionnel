@@ -1,0 +1,38 @@
+<section>
+
+    <!--
+        Votre permis expire le : ...
+        email:
+        nassm: 
+        Nom
+        Prenom 
+        Sexe(icon)
+        Age date de naissance - date courante
+        typePermis enfant ou adulte
+        typePermis test ou vaccin (icon)
+
+
+
+        Settings : Changer votre mot de passe
+        Renouveller permis(si expiré)
+    -->
+    <div class="container p-5  m-5 border text-white" style="background-color: #fcec5f;">
+        <h1 class="text-center"><i class="fas fa-id-card"></i> {{citoyen.id}}</h1>
+        <div class="text-center">
+            <h1 class="d-inline border-bottom mb-2"> {{citoyen.prenom}} {{citoyen.nom}}</h1>
+            <h2>Informations personnelles</h2>
+        </div>
+        <h3>Courriel: <span> {{citoyen.courriel}}</span></h3>
+        <h3>NASSM: <span>{{citoyen.nassm}}</span></h3>
+        <h3>Âge: <span>{{citoyen.age}}</span></h3>
+        <h3><span *ngIf="citoyen.sexe === 'M'">Sexe: <i class="fas fa-mars text-primary"></i></span>
+            <span *ngIf="citoyen.sexe === 'F'">Sexe: <i class="fas fa-venus" style="color: pink;"></i></span>
+            <span *ngIf="citoyen.sexe === 'A'">Sexe: <i class="fas fa-transgender text-info"></i></span>
+        </h3>
+        <hr>
+        <h2>Informations Permis</h2>
+        <h3>Date d'expiration: </h3>
+        
+
+    </div>
+</section>
